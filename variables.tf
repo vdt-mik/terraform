@@ -64,3 +64,6 @@ variable coordinating-only-node-param {
       "disk_type"     = "pd-ssd"
     }
 }
+# variable coordinating-only-node-param_tag {
+#     default = ["es-cluster-member", "allow-write-logs"]
+# }

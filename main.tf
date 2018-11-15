@@ -13,7 +13,7 @@ module "networking" {
 }
 
 module "data-node" {
-    source       = "./modules/compute/data-node"
+    source       = "./modules/compute/instance"
     name         = "${var.data-node-param["name"]}"
     count        = "${var.data-node-param["count"]}"
     machine_type = "${var.data-node-param["machine_type"]}"
@@ -26,7 +26,7 @@ module "data-node" {
 }
 
 module "master-eligible-node" {
-    source       = "./modules/compute/master-eligible-node"
+    source       = "./modules/compute/instance"
     name         = "${var.master-eligible-node-param["name"]}"
     count        = "${var.master-eligible-node-param["count"]}"
     machine_type = "${var.master-eligible-node-param["machine_type"]}"
@@ -39,12 +39,12 @@ module "master-eligible-node" {
 }
 
 module "coordinating-only-node" {
-    source       = "./modules/compute/coordinating-only-node"
+    source       = "./modules/compute/instance"
     name         = "${var.coordinating-only-node-param["name"]}"
     count        = "${var.coordinating-only-node-param["count"]}"
     machine_type = "${var.coordinating-only-node-param["machine_type"]}"
     zone         = "${var.coordinating-only-node-param["zone"]}"
-    tag          = "${var.coordinating-only-node-param["tag"]}"
+    tag          = "${var.master-eligible-node-param["tag"]}"
     image        = "${var.coordinating-only-node-param["image"]}"
     size         = "${var.coordinating-only-node-param["size"]}"
     type         = "${var.coordinating-only-node-param["disk_type"]}"

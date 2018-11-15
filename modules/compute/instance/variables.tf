@@ -1,6 +1,6 @@
 variable name {
     description = "Set name our instance."
-    default     = "master_eligible_node"
+    default     = "node"
 }
 
 variable count {
@@ -42,11 +42,3 @@ variable subnetwork {
     description = "Set subnetwork for our instance."
     default     = "default"
 }
-
-# variable network_ip {
-#     description = "Set internal network ip for our instance."
-# }
-#
-# variable nat_ip {
-#     description = "Set external network ip for our instance."
-# }

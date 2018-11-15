@@ -14,11 +14,3 @@ variable region {
     description = "Set region."
     default     = "europe-west4"
 }
-
-# variable count {
-#     description = "Set count."
-# }
-#
-# variable zone {
-#     description = "Set zone."
-# }
